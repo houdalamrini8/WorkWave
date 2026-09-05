@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --noir: black;
+  --gris: #222831;
+  --beige: #bf9745;
+  --white: white;
+  --royal-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, var(--white), var(--white));
+  color: var(--gris);
+  margin: 0;
+  padding: 0; 
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto; 
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--royal-shadow);
+  padding: 40px;
+  animation: fadeIn 1s ease;
+}
+
+h2 {
+  text-align: center;
+  color: var(--beige);
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.col-md-4 {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 10px; 
+  flex-direction: column;
+}
+
+.col-md-8 {
+  flex: 0 0 65%;
+}
+
+img.img-fluid {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 4px solid var(--beige);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.entreprise-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nom-entreprise {
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--beige);
+  text-align: center;
+}
+
+.col-md-8 p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--gris);
+}
+
+.col-md-8 strong {
+  display: inline-block;
+  width: 130px;
+  color: var(--noir);
+}
+
+a {
+  color: var(--beige);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-secondary {
+  background-color: var(--beige);
+  color: var(--white);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  margin-top: -10px;
+}
+
+.btn-secondary:hover {
+  background-color: #a77d30;
+}
+
+.text-start {
+  text-align: left;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+form textarea {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    padding: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+form .btn-primary {
+    align-self: flex-end;
+    background-color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.comment-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 15px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #eaeaea;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.card-body textarea {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    resize: vertical;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.card-body textarea:focus {
+    outline: none;
+    border-color: #222831;
+    box-shadow: 0 0 0 3px rgba(34, 40, 49, 0.2);
+}
+
+
+.card-body button[type="submit"] {
+    align-self: flex-end;
+    margin-top: 10px;
+    background-color: #222831;
+    color: #ffffff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.card-body button[type="submit"]:hover {
+    background-color: #1a1f26;
+    transform: translateY(-1px);
+}
+
+
+.comment-author {
+    font-weight: 600;
+    color: #222831;
+    margin-bottom: 4px;
+}
+
+.comment-content {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.comment-date {
+    color: #999;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+
+.btn-danger.btn-sm {
+    padding: 6px 14px;
+    background-color: #222831;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-danger.btn-sm:hover {
+    background-color: #1a1f26;
+    cursor: pointer;
+}
+
+
+.card + .card {
+    margin-top: 24px;
+}
+

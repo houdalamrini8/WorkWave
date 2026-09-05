@@ -1,0 +1,242 @@
+
+html{
+    --gris:  #222831;
+    --beige: #bf9745;
+    --white: white;
+    --noir:   black;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--gris);
+    color: var(--white);
+  background-image: url('../images/pfe1.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); 
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--beige);
+    padding: -40% 0%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    gap: -30%; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-right: 5%;
+}
+
+nav ul li {
+    display: inline-block; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gris);
+    font-size: 135%;
+    padding: 0 2%; 
+    white-space: nowrap;
+    margin-right: 60px;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--gris);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0 50px;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    
+    margin-top: 20%;
+    background-color:var(--beige);
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 60px 50px 40px 40px;
+    width: 380px;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+}
+.text{
+    color: var(--noir);
+}
+
+.form-box::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    right: 20px;
+    bottom: 25px;
+    border: 2px solid var(--noir);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.form-title-bar {
+    
+    position: absolute;
+    top: 15px;
+    left: 51%;
+    transform: translateX(-50%);
+    background-color: var(--beige);
+    padding: 0 0px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    z-index: 2;
+}
+
+.trait-horizontal {
+    border-top: 2px solid var(--noir);  
+    width: 100%;                    
+    margin: 20px 0;                 
+}
+
+.input-group {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-left: 6%;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--gris);
+    color: var(--white);
+    
+}
+
+.user-type-select {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.user-type-select label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    appearance: none; 
+    -webkit-appearance: none; 
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--gris); 
+    border: 2px solid var(--beige); 
+    color:var(--beige);
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+input[type="radio"]:checked {
+    background-color: var(--white); 
+    border-color: #222831; 
+  }
+  
+
+.form-button-bar {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--beige);
+    padding: 5px 25px;
+    border: 2px solid var(--noir);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.button-border {
+    display: inline-block;
+    padding: 0;
+    position: relative;
+}
+
+.button{
+    background-color: var(--gris);
+}
+
+.register-btn {
+    position: relative;
+    background-color: var(--beige);
+    color: var(--noir);
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    z-index: 2;
+    
+}
+
+ .register-btn:hover {
+    font-weight: bold;
+    text-decoration: underline;
+} 
+.form-title-text{
+    color: var(--noir);
+}
+.user-type-select{
+    color: var(--noir);
+}
+ input {
+    color: var(--gris);
+}
+.login-link{
+    color: var(--gris);
+}
+.lien{
+    color: var(--white);
+}
